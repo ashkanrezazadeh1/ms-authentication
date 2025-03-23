@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+## [0.0.2]
+
+### Added
+
+- [Feature] Login Api
+- [Feature] Signup Api
+- [Improvement] Integrate with JWT
+- [Improvement] Integrate with Postgresql
+
 ## [0.0.1]
 
 ### Added
+
 - [Feature] Project scaffolding with initial configurations.
