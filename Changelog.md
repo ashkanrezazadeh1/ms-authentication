@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+## [0.0.3]
+
+### Added
+
+- [Improvement] added dockerignore and docker-compose
+- [Feature] added crash api for testing
+
 ## [0.0.2]
 
 ### Added
