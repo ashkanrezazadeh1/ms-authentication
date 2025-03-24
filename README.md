@@ -71,3 +71,27 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Useful Commands
+```bash
+
+# building and running multiple containers
+
+docker-compose up --build
+
+# remove all containers and volumes
+
+docker-compose down -v
+
+# generate database migrations
+
+npm run migrate:generate
+
+# run database migrations
+
+npm run migrate:run
+
+# run database migrations inside the app container
+
+docker-compose exec app npm run migration:run
+```
