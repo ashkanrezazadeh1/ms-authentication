@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+## [0.0.4]
+### Added
+- [Feature] added health api
+- [Improvement] added k8s related yaml files
+- [bugfix] fixed port setting in typeorm config
+- [Improvement] added some useful commands to readme
+
 ## [0.0.3]
 
 ### Added

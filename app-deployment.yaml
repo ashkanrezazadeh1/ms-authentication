@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-auth
+  template:
+    metadata:
+      labels:
+        app: ms-auth
+    spec:
+      containers:
+        - name: ms-auth
+          resources:
+            limits:
+              memory: '1Gi'
+              cpu: '1'
+            requests:
+              memory: '1Gi'
+              cpu: '1'
+          image: ms-auth:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: 'pg-service'
+            - name: DB_PORT
+              value: '5532'
+            - name: DB_USER
+              value: 'postgres'
+            - name: DB_PASSWORD
+              value: '1'
+            - name: DB_NAME
+              value: 'auth'
+          livenessProbe:
+            httpGet:
+              path: /health # Assuming you have a /health route
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 6
+            failureThreshold: 10

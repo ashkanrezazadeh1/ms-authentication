@@ -42,4 +42,9 @@ export class AuthController {
 
     return { message: 'Server will crash shortly...' };
   }
+
+  @Get('health')
+  checkHealth() {
+    return { status: 'OK' }; // A simple response to indicate the app is healthy
+  }
 }

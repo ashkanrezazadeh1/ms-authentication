@@ -94,4 +94,36 @@ npm run migrate:run
 # run database migrations inside the app container
 
 docker-compose exec app npm run migration:run
+
+# check logs of a pod
+
+kubectl logs -f <pod-name>
+
+# describe a pod details
+
+kubectl describe pod <pod-name>
+
+# restart deployment
+
+kubectl rollout restart deployment my-app
+
+# get kuber events
+
+kubectl get events --sort-by=.metadata.creationTimestamp
+
+# use Minikube’s internal Docker registry
+
+eval $(minikube docker-env)
+
+#build and push docker image
+
+docker build -t your-image-name:latest .
+
+#push docker image to repository
+
+docker push your-image-name:latest
+
+#delete a job
+
+kubectl delete job migration-job
 ```
