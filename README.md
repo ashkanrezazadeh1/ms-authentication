@@ -126,4 +126,8 @@ docker push your-image-name:latest
 #delete a job
 
 kubectl delete job migration-job
+
+#assigns external-ip to services in minikube
+
+minikube tunnel
 ```
